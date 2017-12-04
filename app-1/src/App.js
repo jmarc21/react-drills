@@ -15,10 +15,6 @@ class App extends Component {
     console.log(this.state.string)
   }
 
-  message = () =>
-    console.log(this.state.string)
-  
-
   render() {
     return (
       <div className='body'>
