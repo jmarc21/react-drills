@@ -3,31 +3,24 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  constructor() {
+  constructor(){
     super();
-
     this.state = {
-      list: [
-        'spaghetti',
-        'ice cream',
-        'sushi',
-        'bologna',
-        'cheese'
-      ]
+      list: ['spaghetti','ice cream','sushi','bologna','cheese']
     }
   }
 
 
 
   render() {
-    var foodToDisplay = this.state.list.map((element,index)=>{
+    let diplayFood = this.state.list.map((element,index)=>{
       return(
-        <h2 key = {index}>{element}</h2>
+        <h2 key={index}>{element}</h2>
       )
     })
     return (
       <div className="App">
-        {foodToDisplay}
+        {diplayFood}
       </div>
     );
   }
