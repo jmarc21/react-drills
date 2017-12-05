@@ -3,33 +3,35 @@ import './App.css';
 
 class App extends Component {
   constructor() {
-    super()
+    super();
 
     this.state = {
-      filterString:'',
-      foods:[
-        'spagetti',
+      input: '',
+      list: [
+        'spaghetti',
         'ice cream',
         'sushi',
         'bologna',
         'cheese'
       ]
     }
-
   }
 
-  handleChange(filter){
-    this.setState({filterString: filter})
+  updateInput(val) {
+    this.setState({ input: val })
   }
-
 
   render() {
-    var foodsToDisplay = this.state.foods.filter((element, index)=>{return element.includes(this.state.filterString)}).map((element,index)=>{return <h2 key={index}>{element}</h2>})
-    
+    let foodsToDisplay = this.state.list.filter((element, index) => {
+      return element.includes(this.state.input)
+    }).map((element,index)=>{
+        return <h2 key={index}>{element}</h2>
+    })
+
     return (
-      <div className="App">
-        <input onChange={(e)=> this.handleChange(e.target.value)} type="text" />         
-        { foodsToDisplay }
+      <div className="App" >
+        <input onChange={(e) => this.updateInput(e.target.value)}></input>
+        {foodsToDisplay}
       </div>
     );
   }
