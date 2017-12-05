@@ -5,22 +5,22 @@ import './App.css';
 class App extends Component {
   constructor() {
     super();
-
     this.state = {
       string: ''
     }
   }
 
-  updateString(val){
-    this.setState({string:val})
+  updateScreen(val){
+    this.setState({
+      string: val
+    })
   }
-
 
   render() {
     return (
       <div className="App">
-        <input onChange={(e)=> this.updateString(e.target.value)}/>
-        <h4>{this.state.string}</h4>
+        <input onChange={e => this.updateScreen(e.target.value)} />
+        <h2>{this.state.string}</h2>
       </div>
     );
   }
