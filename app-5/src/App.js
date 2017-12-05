@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Image myImage={'https://http.cat/404'}/>
+        <Image />
       </div>
     );
   }
