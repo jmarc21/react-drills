@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-export default function Todo (props){
-    return (
-        <p>{props.task}</p>
-    )
+export default class Todo extends Component{
+    render(){
+        return(
+            <p></p>
+        )
+    }
 }
